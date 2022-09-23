@@ -23,19 +23,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int a = Integer.parseInt(szamlalo.getText().toString());
-                szamlalo.setText(a++);
+                a++;
+                szamlalo.setText(String.valueOf(a));
                 if (a>0)
                 {
-                    szamlalo.setTextColor(Color.green(0));
+                    szamlalo.setTextColor(Color.GREEN);
 
                 }else if (a<0)
                 {
-                    szamlalo.setTextColor(Color.red(0));
+                    szamlalo.setTextColor(Color.RED);
 
                 }
                 else {
 
-                    szamlalo.setTextColor(Color.blue(0));
+                    szamlalo.setTextColor(Color.BLUE);
                 }
 
             }
@@ -44,13 +45,28 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int b = Integer.parseInt(szamlalo.getText().toString());
-                szamlalo.setText(b--);
+                b--;
+                szamlalo.setText(String.valueOf(b));
+                if (b>0)
+                {
+                    szamlalo.setTextColor(Color.GREEN);
+
+                }else if (b<0)
+                {
+                    szamlalo.setTextColor(Color.RED);
+
+                }
+                else {
+
+                    szamlalo.setTextColor(Color.BLUE);
+                }
             }
         });
         szamlalo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 szamlalo.setText("0");
+                szamlalo.setTextColor(Color.BLUE);
             }
         });
 
